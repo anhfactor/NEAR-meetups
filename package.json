@@ -1,5 +1,5 @@
 {
-  "name": "NEAR-meetups",
+  "name": "near-meetups",
   "version": "1.0.0",
   "description": "Creating a meetups Dapp using NEAR protocol",
   "main": "index.js",
