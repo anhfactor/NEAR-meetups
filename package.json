@@ -1,0 +1,11 @@
+{
+  "name": "NEAR-meetups",
+  "version": "1.0.0",
+  "description": "Creating a meetups Dapp using NEAR protocol",
+  "main": "index.js",
+  "author": "nyambura00 <winnienyambura14@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "near-sdk-as": "^3.2.3"
+  }
+}
