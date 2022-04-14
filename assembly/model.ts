@@ -1,27 +1,12 @@
-import { PersistentUnorderedMap, context } from 'near-sdk-as';
+import { PersistentVector, context, u128 } from 'near-sdk-as';
 
-@nearBindgen
+@nearBindgen //serializing class so that it is compatible to NEAR blockchain
 export class MeetingUnit {
-    id: string;
-    name: string;
-    description: string;
-    image: string;
-    location: string;
+    id: i32;
     owner: string;
-    date: Date;
-
-    public static fromPayload(payload: MeetingUnit): MeetingUnit {
-        const newmeeting = new MeetingUnit();
-        newmeeting.id = payload.id;
-        newmeeting.name = payload.name;
-        newmeeting.description = payload.description;
-        newmeeting.image = payload.image;
-        newmeeting.location = payload.location;
-        newmeeting.owner = context.sender;
-        newmeeting.date = payload.date;
-        return newmeeting;
+    constructor(public title: string, public description: string, public location: string, public date: Date, public imageUrl:string){
+        this.owner = context.sender;
     }
-
 }
 
-export const listedMeetups = new PersistentUnorderedMap<string, MeetingUnit>("LISTED_MEETUPS");
+export const availableMeetups = new PersistentVector<MeetingUnit>("meetups");
