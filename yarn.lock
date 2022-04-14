@@ -215,6 +215,13 @@ asbuild@^0.2.0:
     eslint "^7.17.0"
     yargs "^15.4.1"
 
+asp@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/asp/-/asp-0.0.2.tgz#b95f0810747c5b316ee5750a94f991c02da70018"
+  integrity sha1-uV8IEHR8WzFu5XUKlPmRwC2nABg=
+  dependencies:
+    js-fpm "0.0.2"
+
 assemblyscript-json@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/assemblyscript-json/-/assemblyscript-json-1.1.0.tgz#49d38bc21f1ac36f2887528a35de6cf7d59c17be"
@@ -768,6 +775,11 @@ js-base64@^3.4.3:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-3.7.2.tgz#816d11d81a8aff241603d19ce5761e13e41d7745"
   integrity sha512-NnRs6dsyqUXejqk/yv2aiXlAvOs56sLkX6nUdeaNezI5LFFLlsZjOThmwnrcwh5ZZRwZlCMnVAY3CvhIhoVEKQ==
+
+js-fpm@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/js-fpm/-/js-fpm-0.0.2.tgz#0349acbf4eca2818c19d9c190cb7049e707cf9bf"
+  integrity sha1-A0msv07KKBjBnZwZDLcEnnB8+b8=
 
 js-tokens@^4.0.0:
   version "4.0.0"

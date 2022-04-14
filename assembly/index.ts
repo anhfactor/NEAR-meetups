@@ -3,13 +3,14 @@ import { MeetingUnit, availableMeetups } from './model';
 
 //adding an event
 export function addEvent(title:string, description:string, location:string, date:Date, imageURL:string): void{
-    const newEvent = new MeetingUnit(title, description, location, date, imageURL);
+    const newEvent = new MeetingUnit(title, description, location, date, imageURL, availableMeetups.length);
     availableMeetups.push(newEvent);
 }
 
 //reading a specific event detail
 export function getEvent(id: i32): MeetingUnit{
-    return availableMeetups[i32(id)];  //fetching an existing meetup id from the existing collection
+    const result = availableMeetups[i32(id)];  //fetching an existing meetup id from the existing collection
+    return result;
 }
 
 //reading all available meetups
