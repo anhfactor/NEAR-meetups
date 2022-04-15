@@ -13,7 +13,7 @@ const newEvent = createEvent(
                             "Nairobi, Kenya",
                             new Date(19/7/2022),
                             "https://bit.ly/3M0WeBS"
-                );
+                );              
 
 describe("meetup tests", () =>{
     afterEach(() => {
@@ -22,7 +22,7 @@ describe("meetup tests", () =>{
         }
     });
 
-    it("Add an event", ()=> {
+    it("Add an event", () => {
         addEvent("NEAR 101",
                 "Get solidly started with NEAR Fundamentals",
                 "Nairobi, Kenya",
@@ -35,7 +35,7 @@ describe("meetup tests", () =>{
         );
         expect(availableMeetups[0]).toStrictEqual(
             newEvent,
-            'first meetup should be "NEAR 101. Get solidly started with NEAR Fundamentals Nairobi, Kenya, 19/7/2022"'
+            "output first meetups event"
         );
         expect(availableMeetups[0].imageUrl).toStrictEqual(
             newEvent.imageUrl,
