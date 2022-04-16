@@ -21,9 +21,3 @@ export function getEvents(): MeetingUnit[]{
       }
     return result;
 }
-
-//sponsoring a particular event
-export function sponsorEvent(id:i32, sponsoredAmount:u128):void {
-    const specificEvent = getEvent(id);
-    ContractPromiseBatch.create(specificEvent.owner).transfer(sponsoredAmount);
-}

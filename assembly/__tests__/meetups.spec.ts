@@ -1,4 +1,4 @@
-import { addEvent, getEvent, getEvents, sponsorEvent } from '../index';
+import { addEvent, getEvent, getEvents } from '../index';
 import { MeetingUnit, availableMeetups } from '../model';
 
 import {VMContext, Context, u128} from 'near-sdk-as';
