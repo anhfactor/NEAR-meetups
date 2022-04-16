@@ -3,7 +3,7 @@ import { MeetingUnit, availableMeetups } from '../model';
 
 import {VMContext, Context, u128} from 'near-sdk-as';
 
-function createEvent(title:string, description:string, location:string, date:Date, imageURL:string):MeetingUnit {
+function createEvent(title:string, description:string, location:string, date:string, imageURL:string):MeetingUnit {
     return new MeetingUnit(title, description, location, date, imageURL, 0);
 }
 
@@ -11,7 +11,7 @@ const newEvent = createEvent(
                             "NEAR 101",
                             "Get solidly started with NEAR Fundamentals",
                             "Nairobi, Kenya",
-                            new Date(19/7/2022),
+                            "19/07/2022",
                             "https://bit.ly/3M0WeBS"
                 );              
 
@@ -26,7 +26,7 @@ describe("meetup tests", () =>{
         addEvent("NEAR 101",
                 "Get solidly started with NEAR Fundamentals",
                 "Nairobi, Kenya",
-                new Date(19/7/2022),
+                "19/07/2022",
                 "https://bit.ly/3M0WeBS"
         );
         expect(availableMeetups.length).toBe(
@@ -47,11 +47,11 @@ describe("meetup tests", () =>{
         addEvent("NEAR 101",
                 "Get solidly started with NEAR Fundamentals",
                 "Nairobi, Kenya",
-                new Date(19/7/2022),
+                "19/07/2022",
                 "https://bit.ly/3M0WeBS"
         );
         const meetupResult = getEvent(0);
-        expect(meetupResult).toBe(
+        expect(meetupResult).toStrictEqual(
             availableMeetups[0],
             'id of the one listed Meetup'
         );
@@ -62,7 +62,7 @@ describe("meetup tests", () =>{
         addEvent("NEAR 101",
                 "Get solidly started with NEAR Fundamentals",
                 "Nairobi, Kenya",
-                new Date(19/7/2022),
+                "19/07/2022",
                 "https://bit.ly/3M0WeBS"
         );
         const meetupsList = getEvents();
@@ -87,7 +87,7 @@ describe("meetup tests", () =>{
         addEvent("NEAR 101",
                 "Get solidly started with NEAR Fundamentals",
                 "Nairobi, Kenya",
-                new Date(19/7/2022),
+                "19/07/2022",
                 "https://bit.ly/3M0WeBS"
         );
         VMContext.setAttached_deposit(u128.from('10'));
