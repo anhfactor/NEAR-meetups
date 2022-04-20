@@ -48,7 +48,8 @@ The following commands allow you to interact with the smart contract methods usi
 Note: 
 ---- 
 $ CONTRACT is a variable, but it is empty, you have to assign it, the way it assigns it is as follows, in the console, for example:
-	export CONTRACT=<Contract-address>
+---- 
+    export CONTRACT= [Contract-address]
 
 Command to add event: 
 ---- 
